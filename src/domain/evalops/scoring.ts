@@ -34,7 +34,11 @@ export function calculateRunHealth(run: EvaluationRun): number {
   const latencyPenalty = Math.max(0, (run.latencyMs - 1500) / 25);
   const costPenalty = Math.max(0, (run.costUsd - 0.025) * 1000);
 
-  return clamp(Math.round(quality + safety + 15 - latencyPenalty - costPenalty), 0, 100);
+  return clamp(
+    Math.round(quality + safety + 15 - latencyPenalty - costPenalty),
+    0,
+    100,
+  );
 }
 
 export function summarizeFindings(findings: SecurityFinding[]): FindingSummary {

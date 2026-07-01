@@ -15,6 +15,7 @@ export type {
   FindingSummary,
   PromptVersion,
   ReleaseGate,
+  ReleaseDecision,
   ReleaseSummary,
   RunFilters,
   RunStatus,

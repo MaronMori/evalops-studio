@@ -1,6 +1,9 @@
 import type { EvaluationRun, RunFilters } from "./types";
 
-export function filterRuns(runs: EvaluationRun[], filters: RunFilters): EvaluationRun[] {
+export function filterRuns(
+  runs: EvaluationRun[],
+  filters: RunFilters,
+): EvaluationRun[] {
   const query = filters.query?.trim().toLowerCase();
 
   return runs.filter((run) => {
@@ -22,7 +25,5 @@ export function filterRuns(runs: EvaluationRun[], filters: RunFilters): Evaluati
 }
 
 export function sortRunsByStartedAt(runs: EvaluationRun[]): EvaluationRun[] {
-  return [...runs].sort(
-    (a, b) => Date.parse(b.startedAt) - Date.parse(a.startedAt),
-  );
+  return [...runs].sort((a, b) => Date.parse(b.startedAt) - Date.parse(a.startedAt));
 }
