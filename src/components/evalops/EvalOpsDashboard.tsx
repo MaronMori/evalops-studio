@@ -31,9 +31,9 @@ export function EvalOpsDashboard({ dataset }: EvalOpsDashboardProps) {
   );
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),transparent_32rem),#090b0f] text-slate-100">
-      <div className="grid min-h-screen lg:grid-cols-[248px_1fr]">
-        <aside className="border-b border-white/10 bg-black/20 px-5 py-4 lg:border-r lg:border-b-0">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),transparent_32rem),#090b0f] text-slate-100">
+      <div className="grid min-h-screen w-full max-w-full lg:grid-cols-[248px_1fr]">
+        <aside className="max-w-full overflow-x-hidden border-b border-white/10 bg-black/20 px-5 py-4 lg:border-r lg:border-b-0">
           <div className="flex items-center justify-between gap-3 lg:block">
             <div>
               <p className="font-mono text-xs text-cyan-200">EvalOps</p>
@@ -68,7 +68,7 @@ export function EvalOpsDashboard({ dataset }: EvalOpsDashboardProps) {
           </div>
         </aside>
 
-        <main className="min-w-0 px-4 py-4 sm:px-6 lg:px-8">
+        <main className="min-w-0 max-w-full overflow-x-hidden px-4 py-4 sm:px-6 lg:px-8">
           <header className="flex flex-col gap-4 border-b border-white/10 pb-5 xl:flex-row xl:items-center xl:justify-between">
             <div>
               <p className="font-mono text-xs text-slate-500">AI RELEASE GOVERNANCE</p>

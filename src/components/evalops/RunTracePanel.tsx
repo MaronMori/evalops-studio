@@ -42,17 +42,17 @@ export function RunTracePanel({
   return (
     <section
       aria-labelledby="run-traces"
-      className="grid gap-4 lg:grid-cols-[1.4fr_0.9fr]"
+      className="grid min-w-0 gap-4 lg:grid-cols-[1.4fr_0.9fr]"
     >
-      <div className="rounded-lg border border-white/10 bg-white/[0.045] p-4">
-        <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
-          <div>
+      <div className="min-w-0 rounded-lg border border-white/10 bg-white/[0.045] p-4">
+        <div className="flex min-w-0 flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+          <div className="min-w-0">
             <p className="font-mono text-xs text-slate-400">RUN TRACE</p>
             <h2 id="run-traces" className="mt-1 text-lg font-semibold text-white">
               実行トレース
             </h2>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+          <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center">
             <label className="sr-only" htmlFor="run-search">
               実行トレースを検索
             </label>
@@ -63,9 +63,9 @@ export function RunTracePanel({
                 onFiltersChange({ ...filters, query: event.target.value })
               }
               placeholder="agent / model / prompt"
-              className="h-10 rounded-md border border-white/10 bg-slate-950 px-3 text-sm text-white outline-none transition focus:border-cyan-300"
+              className="h-10 min-w-0 rounded-md border border-white/10 bg-slate-950 px-3 text-sm text-white outline-none transition focus:border-cyan-300"
             />
-            <div className="flex rounded-md border border-white/10 bg-slate-950 p-1">
+            <div className="flex max-w-full overflow-x-auto rounded-md border border-white/10 bg-slate-950 p-1">
               {statuses.map((status) => (
                 <button
                   key={status}
@@ -84,7 +84,7 @@ export function RunTracePanel({
           </div>
         </div>
 
-        <div className="mt-4 overflow-x-auto">
+        <div className="mt-4 max-w-full overflow-x-auto">
           <table className="w-full min-w-[760px] border-separate border-spacing-0 text-left text-sm">
             <thead className="text-xs text-slate-500">
               <tr>
