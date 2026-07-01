@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      next-stack:
+        patterns:
+          - next
+          - react
+          - react-dom
+          - eslint-config-next
+      test-tooling:
+        patterns:
+          - vitest
+          - "@testing-library/*"
+          - "@playwright/test"
+          - playwright
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
