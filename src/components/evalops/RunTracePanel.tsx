@@ -37,7 +37,7 @@ export function RunTracePanel({
 }: RunTracePanelProps) {
   const filteredRuns = sortRunsByStartedAt(filterRuns(runs, filters));
   const selectedRun =
-    runs.find((run) => run.id === selectedRunId) ?? filteredRuns[0] ?? runs[0];
+    filteredRuns.find((run) => run.id === selectedRunId) ?? filteredRuns[0] ?? runs[0];
 
   return (
     <section

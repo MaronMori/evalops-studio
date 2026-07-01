@@ -9,12 +9,12 @@ export default defineConfig({
   fullyParallel: true,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: "http://127.0.0.1:3107",
     trace: "on-first-retry",
   },
   webServer: {
-    command: "npm run dev",
-    url: "http://127.0.0.1:3000",
+    command: "next dev -H 127.0.0.1 -p 3107",
+    url: "http://127.0.0.1:3107",
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
